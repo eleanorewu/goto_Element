@@ -1,10 +1,11 @@
 $("*").each(function () {
     $(this).click(function () { 
         var target =$(this).attr("data-goto-target");
-        var duration =$(this).attr("data-goto-duration");
 
-        console.log("目標元素：" + target);
-        console.log("時間：" + duration);
+        if (target !=undefined){
+            var duration =$(this).attr("data-goto-duration");
+            var top = $(target).offset().top;
+            $("html, body").animate({scrollTop: top}, parseInt(duration));
+        }
     });
-    
 });
