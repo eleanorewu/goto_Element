@@ -11,3 +11,8 @@ jQuery CDN
 go to element CDN
 
     <script src="https://uie-823.github.io/goto_Element/gotoelement.js"></script>
+
+# 屬性
+
+    data-goto-target="#指定名稱ID" 
+    data-goto-duration="時間"
