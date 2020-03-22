@@ -10,7 +10,15 @@ $("*").each(function () {
             // 上方位置 = 目標屬性.位移.上方
             var top = $(target).offset().top;
             // 動畫({捲動上方：上方位置}，時間)
-            $("html, body").animate({scrollTop: top}, parseInt(duration));
+            $("html, body").stop().animate({scrollTop: top}, parseInt(duration));
         }
+    });
+});
+
+// 當捲動滾輪時停止動畫
+// jqon 事件：mousewheel 滑鼠滾動
+$(window).on("mousewheel", function () {
+    $("*").each(function () {
+        $(this).stop();
     });
 });
