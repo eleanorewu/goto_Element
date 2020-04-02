@@ -2,7 +2,7 @@ $("*").each(function () {
     $(this).click(function () { 
         // 目標屬性
         var target =$(this).attr("data-goto-target");
-
+        
          // 如果 目標屬性 不等於 未定義資料
         if (target !=undefined){
             // 時間屬性
@@ -22,3 +22,7 @@ $(window).on("mousewheel", function () {
         $(this).stop();
     });
 });
+
+
+
+
